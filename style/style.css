@@ -1,15 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
 
-body {
-    margin: 0px;
-    padding: 0px;
+
+html {
+    font-size: 62.5%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
     font-family: 'Lato', sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Work Sans', sans-serif;
 }
+nav {
+    background: #FFF;
+    height: 80px;
+    width: 100%;
+}
+label.logo {
+    color: #3A3A3A;
+    font-size: 3rem;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+    color: #3A3A3A;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active, a:hover {
+    background: black;
+    transition: .5s;
+    color: #FFF;
+}
+.checkbtn {
+    font-size: 30px;
+    color: #3A3A3A;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+  display: none;
+}
 
-header {
+
+ header {
     background-color: #FFF;
 }
 
@@ -29,94 +85,50 @@ header {
     font-weight: 700;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 120px;
+
+
+
+
+@media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #FFF;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+  }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  section {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
 }
-
-nav h1 {
-    color: #3A3A3A;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.nav-menu {
-    display: flex;
-
-}
-
-.nav-menu li {
-    list-style: none;
-}
-
-.nav-menu li a {
-    color: #3A3A3A;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    margin-right: 34px;
-}
-
-.banner-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.banner-text {
-    padding: 145px 120px;
-}
-
-.banner-text h1 {
-    color: #3A3A3A;
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin: 0px;
-}
-
-.banner-img {
-    padding: 50px 165px;
-    background-image: url('../images/Circle\ design.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 500px;
-
-}
-
-.banner-img img {}
-
-.logos-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 165px;
-    margin: 100px 0px;
-}
-
-.popular-collection {}
-
-.text-center {
-    color: #3A3A3A;
-    font-size: 1.7rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.popular-collection-sales {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.card {}
-
-.card img {}
-
-.card h3 {}
-
-.card h6 {}
-
-.card p {}
