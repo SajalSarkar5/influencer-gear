@@ -1,3 +1,4 @@
+/* style start */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
 
 
@@ -12,14 +13,14 @@ html {
     list-style: none;
     box-sizing: border-box;
 }
-
+/* body section */
 body {
     font-family: 'Lato', sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Work Sans', sans-serif;
 }
-
+/* navbar section start */
 nav {
     background: #FFF;
     height: 80px;
@@ -84,7 +85,7 @@ a:hover {
         font-size: 16px;
     }
 }
-
+/* navbar media query */
 @media (max-width: 858px) {
     .checkbtn {
         display: block;
@@ -126,7 +127,7 @@ section {
     background: url(bg1.jpg) no-repeat;
     background-size: cover;
 }
-
+/* navbar section end */
 
 header {
     background-color: #FFF;
@@ -147,7 +148,7 @@ header {
     padding: 10px 24px;
     border: 0;
 }
-
+/* banner section start */
 .banner-container,
 .banner-img {
     width: 100%;
@@ -182,7 +183,9 @@ header {
 .banner-img img {
     width: 80%;
 }
+/* banner section end */
 
+/* logos section start */
 .logos-container {
     display: flex;
     justify-content: space-evenly;
@@ -190,6 +193,7 @@ header {
     flex-wrap: wrap;
     width: 90%;
     margin: 0px auto;
+    margin-bottom: 100px;
 }
 
 .logo {
@@ -203,7 +207,9 @@ header {
 .logo img {
     width: 100%;
 }
+/* logos section end */
 
+/* collection section start */
 .collection-container {
     margin-top: 100px;
 }
@@ -215,7 +221,8 @@ header {
     font-weight: 600;
 }
 
-.collection-container, .popular-collection {
+.collection-container,
+.popular-collection {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -223,30 +230,151 @@ header {
     justify-content: center;
     width: 90%;
     margin: 0px auto;
+    position: relative;
 }
 
-.card {}
+.card {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 17px 15px;
+    margin-top: 30px;
+}
 
-.card img {}
+.card img {
+    width: 100%;
+}
 
-.card h5 {}
+.card h5 {
+    color: var(--text-gray-900, #18191F);
+    font-family: Poppins;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
 
-.card h6 {}
+.card h6 {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
 
-.card small {}
+.card small {
+    color: #5E6366;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+}
 
-.card small i {}
+.card small i {
+    color: #FB8200;
+}
 
-.card p {}
+.card p {
+    color: var(--gray-50, #787885);
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 143%;
+    letter-spacing: 0.252px;
+}
 
+.see-more {
+    color: rgba(224, 44, 109, 0.87);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    right: 84px;
+    bottom: 270px;
+}
+/* collection section end */
 
+/* featured products section start */
+.featured-products-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 165px;
 
+}
 
+.featured-products-img {
+    width: 50%;
+    padding: 80px;
+}
 
+.featured-products-img img {
+    width: 100%;
+}
 
+.featured-products-text {
+    width: 50%;
+    padding: 80px;
+}
 
+.featured-products-text h3 {
+    color: #0A0826;
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
 
+.featured-products-text p {
+    color: #6C6C6C;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+/* featured products section end */
 
+/* footer section start */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0826;
+    padding: 50px 599px;
+}
+
+.footer-container {
+    text-align: center;
+}
+
+.footer-container h3 {
+    color: #FFF;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer-container small {
+    color: var(--text-gray-300, #D9DBE1);
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.footer-icons i {
+    color: #FFF;
+    font-size: 2rem;
+    margin: 20px;
+}
+/* footer section end */
+
+/* Small devices */
 @media screen and (max-width:692px) {
     html {
         font-size: 50%;
@@ -291,9 +419,42 @@ header {
     .logo img {
         width: 100%;
     }
+
+    .collection-container,
+    .popular-collection {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .featured-products-container {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+
+    .featured-products-img {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .featured-products-img img {
+        width: 100%;
+    }
+
+    .featured-products-text {
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    footer {
+        padding: 40px 0px;
+    }
 }
 
-
+/* Medium devices */
 @media screen and (min-width:577px) and (max-width:992px) {
     html {
         font-size: 50%;
@@ -337,5 +498,39 @@ header {
 
     .logo img {
         width: 100%;
+    }
+
+    .popular-collection {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .featured-products-container {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+
+    .featured-products-img {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .featured-products-img img {
+        width: 100%;
+    }
+
+    .featured-products-text {
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    footer {
+        padding: 60px 0px;
     }
 }
